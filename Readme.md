@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Татьяна Чистоусова](https://up.htmlacademy.ru/htmlcss/23/user/475815).
-* Наставник: `Неизвестно`.
+* [Никита Рогатнев] (https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
