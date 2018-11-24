@@ -8,7 +8,12 @@
     <header class="main-header">
       <a href="index.html" class="logo-header"><img src="img/logo.svg" width="167" height="54" alt="device"></a>
       <div class="search">
-        <!-- форма: поле поиска --> 
+        <div class="search">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" placeholder="Поиск по сайту">
+          <button class="button-search-form">Искать</button>
+         </form> 
+      </div> 
       </div>
       <div class="user-navigation">
         <ul class="user-navigation-list">
@@ -45,8 +50,42 @@
         <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
       </ul>
       <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
         <span class="filters-text">Фильтр</span>
-        <!-- Здесь будет форма -->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+          <legend>Цвет</legend>
+            <ul>
+              <li class="filter-option">
+                <input type="checkbox" name="color" id="black" value="black" checked>
+                <label for="black">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" name="color" value="white" id="white">
+                <label for="white">Белый</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" name="color" id="blue" value="blue" checked>
+                <label for="blue">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" name="color" id="red" value="red" checked>
+                <label for="red">Красный</label>
+              </li><li class="filter-option">
+                <input type="checkbox" name="color" id="pink" value="pink">
+                <label for="pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <input type="radio" name="bluetooth" id="yes" value="bluetooth-yes" checked>
+            <label for="yes">Есть</label>
+            <input type="radio" name="bluetooth" id="no" value="bluetooth-no">
+            <label for="no">Нет</label>
+          </fieldset>
+          <button type="submit" class="button-filter">Показать</button>
+        </form>
       </section>
       <section class="sorting">
         <span class="sorting-text">Сортировка</span>
@@ -67,6 +106,7 @@
             <div class="catalog-item-image">
               <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
             </div>
+            <h1 class="visually-hidden">Каталог товаров</h1>
             <h2>   
               <a href="catalog-item.html">Любительская селфи-палка</a>
             </h2>

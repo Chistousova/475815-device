@@ -8,7 +8,10 @@
     <header class="main-header">
       <a class="logo-header disabled"><img src="img/logo.svg" width="167" height="54" alt="device"></a>
       <div class="search">
-        <!-- форма: поле поиска --> 
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" placeholder="Поиск по сайту">
+          <button class="button-search-form">Искать</button>
+         </form> 
       </div>
       <div class="user-navigation">
         <ul class="user-navigation-list">
@@ -173,7 +176,7 @@
       <div class="main-contacts">
         <h2>Контакты</h2>
         <p class="main-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="#"><img src="img/map.jpg" width="560" height="222" alt="map"></a>
+        <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Офис находится на улице Строителей 15, г.Москва"></a>
         <a href="#" class="internal-link">Напишите нам</a>
       </div>
     </main>
@@ -203,5 +206,26 @@
         </ul>
       </div>
     </footer>
+    <div class="form-write-us">
+      <button class="form-write-us-close" type="button">
+        Закрыть
+      </button>
+      <form class="write-us" action="https://echo.htmlacademy.ru" method="post">
+        <label for="username">Ваше имя:</label>
+        <input type="text" name="username" id="username" placeholder="Имя Фамилия">
+        <label for="e-mail">Ваш e-mail:</label>
+        <input type="text" name="e-mail" id="e-mail" placeholder="email@axample.com">
+        <label for="user-letter">Ваше сообщение:</label>
+        <textarea id="user-letter" name="user-letter" placeholder="В свободной форме"></textarea>
+        <button class="button-write-us" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="map-popup">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <button class="map-popup-close">
+        Закрыть
+      </button>
+      <img src="img/map-big-jpg.png" width="960" height="559" alt="Офис находится на улице Строителей 15, г.Москва">
+    </div>
   </body>
 </html>
