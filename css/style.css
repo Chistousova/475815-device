@@ -1,53 +1,64 @@
 /*Подключение шрифтов */
 @font-face {
     font-family: "Gilroy";
-    src: url('fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+    src: url('fonts/gilroyextrabold-webfont.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url('fonts/gilroylight-webfont.woff2') format('woff2'),
+    src: url('fonts/gilroylight-webfont.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url('fonts/opensans-light-webfont.woff2') format('woff2'),
+    src: url('fonts/opensans-light-webfont.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url('fonts/opensans-regular-webfont.woff2') format('woff2'),
+    src: url('fonts/opensans-regular-webfont.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 
 }
 
 body {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  color: #000000;
-  line-height: 24px;
-  background-color: #ffffff;
+margin: 0 auto;
+padding: 0;
+width: 1440px;
+font-family: "Gilroy", Arial, sans-serif;
+font-weight: 800;
+font-size: 15px;
+color: #000000;
+line-height: 24px;
+background-color: #ffffff;
 }
 
 a {
-  text-decoration: none;
-  color: #000000;
+text-decoration: none;
+color: #000000;
 }
 
 /* header */
 .main-header {
 background-color: #f7e296;
+width: 1160px;
+margin-left: 140px;
+margin-right: 140px;
+margin-top: 20px;
+padding-left: 60px;
+padding-right: 60px;
+
+}
+
+.logo-header{
+width: 164px;
 }
 
 .logo-header img:hover {
@@ -58,18 +69,29 @@ opacity: 0.6;
 opacity: 0.3;
 }
 
+
+.header-wrapper{
+display: flex;
+margin-top: 20px;
+justify-content:space-between;
+}
+
+
 .search {
 font-size: 15px;
 font-family: "Open Sans", Arial, sans-serif;
 color: rgba(0, 0, 0, 0.302);
 line-height: 30px;
 background-color: #f7e296;
+margin-left: 40px;
+width: 415px;
 
 }
 
 .search-form input{
 background-color: #f7e296;
 border: none;
+
 }
 
 
@@ -93,13 +115,17 @@ background-color: #000000;
 /* меню */
 
 .user-navigation {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 15px;
 font-weight: 300;
 line-height: 2;
 letter-spacing: 0.2px;
+
 }
 
+.user-navigation-list{
+margin: 0;
+}
 .user-navigation-list a:hover {
 color: rgba(0, 0, 0, 0.6);
 }
@@ -108,14 +134,56 @@ color: rgba(0, 0, 0, 0.6);
 color: rgba(0, 0, 0, 0.3)	
 }
 
+.user-navigation-list li{
+display: inline;
+
+}
+
+.user-navigation-list li:nth-child(1){
+margin-right: 218px;
+}
 
 .user-navigation-list li, 
 .main-navigation li {
 list-style: none; 
 }
 
+.user-navigation-list li:nth-child(2){
+margin-right: 27px;
+}
+
+.main-navigation {
+margin-top:50px;
+padding-bottom: 45px;
+font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+
+}
+
+.site-navigation{
+margin: 0;
+display: flex;
+justify-content: space-between;
+}
+
+.site-navigation li:nth-child(1){
+margin-right: 326px;
+
+}
+
+.site-navigation li:nth-child(3){
+margin-left: 39px;
+margin-right: 115px;
+}
+
 .site-navigation li {
 text-transform: uppercase;
+display: inline;
 }
 
 .site-navigation a:hover {
@@ -127,57 +195,107 @@ color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog-navigation li {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 15px;
 font-weight: 300;
 line-height: 2.4;
 letter-spacing: 0.2px;
 list-style: none;
 text-transform: none;
+display: block;
 }
 
+/* main */
+
+.container{
+padding-left: 140px;
+padding-right: 140px;
+}
 
 /*about us, contacts */
 
-.about-us h2 {
-font-family: Gilroy, Arial, sans-serif;
-font-size: 47.5px;
-font-weight: 800;
-line-height: 1;
-letter-spacing: 0.5px;
+.about-us-wrapper{
+display:flex;
+justify-content: space-between;
+width: 1160px;
+}
+
+.about-us{
+width: 480px;
+margin: 0;
+display:flex;
+justify-content: space-between;
+flex-direction: column;
 
 }
 
-.main-contacts h2 {
-font-family: Gilroy, Arial, sans-serif;
+.about-us h2 {
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 47.5px;
 font-weight: 800;
 line-height: 1;
 letter-spacing: 0.5px;
+margin: 0;
+margin-bottom: 60px;
+
+
+}
+
+.main-contacts {
+width: 560px;
+margin: 0;
+display:flex;
+justify-content: space-between;
+flex-direction: column;
+}
+
+.main-contacts h2 {
+font-family: "Gilroy", Arial, sans-serif;
+font-size: 47.5px;
+font-weight: 800;
+line-height: 1;
+letter-spacing: 0.5px;
+margin: 0;
+margin-bottom: 60px;
 
 }
 
 .main-text {
 font-size: 15px;
 font-weight: 300;
-line-height: 2;
+line-height: 30px;
 letter-spacing: normal;
+margin: 0;
+margin-bottom: 44px;
+
+}
+
+.transport-companies {
+margin: 0;
+margin-top: 45px;
+padding-left: 30px;
+
 }
 
 .transport-companies li {
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 16px;
 font-weight: 800;
 line-height: 2;
 list-style: none;
 }
+
 .internal-link {
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 18.5px;
 font-weight: 800;
 line-height: 1.27;
 letter-spacing: 3.7px;
 background-color: #f0c52e;
+display: block;
+width: 260px;
+margin-top: 85px;
+margin-bottom: 98px;
 }
 
 
@@ -194,7 +312,7 @@ background-color: #dbdbdb;
 }
 
 .filters-text, .sorting {
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 17.5px;
 font-weight: 800;
 line-height: 1.4;
@@ -207,7 +325,7 @@ background-color: #eeeeee;
 }
 
 .sorting-list {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 font-stretch: normal;
 line-height: 1.25;
@@ -225,7 +343,7 @@ list-style: none;
 }
 
 .catalog-item h2 {
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 18px;
 font-weight: 800;
 line-height: 1.33;
@@ -233,7 +351,7 @@ letter-spacing: 0.2px;
 }
 
 .price {
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 16px;
 font-weight: 300;
 line-height: 1.5;
@@ -245,6 +363,13 @@ color: #dbdbdb;
 /*footer*/
 .main-footer{
 background-color:#464646; 
+padding-left: 140px;
+padding-right: 140px;
+}
+
+.footer-wrapper{
+display: flex;
+justify-content: space-between;
 }
 
 .logo-footer img:hover {
@@ -253,6 +378,14 @@ opacity: 0.6;
 
 .logo-footer img:active {
 opacity: 0.3;
+}
+
+.user-navigation-footer li:last-child(1){
+width: 58px;
+}
+
+.user-navigation-footer li:last-child(2){
+width: 70px;
 }
 
 .main-footer a {
@@ -264,7 +397,7 @@ list-style: none;
 }
 
 .footer-contacts {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 15px;
 font-weight: 300;
 line-height: 2;
@@ -302,14 +435,14 @@ color: rgba(255, 255, 255, 0.7);
 
 /* Формы */
 .write-us{
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 17.5px;
 font-weight: 800;
 line-height: 1.4;
 }
 
 .write-us input[ type="text"] {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 line-height: 1.25;
 letter-spacing: normal;
@@ -319,7 +452,7 @@ background-color: #f2f2f2;
 }
 
 .write-us input[type="text"]:hover {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 line-height: 1.25;
 letter-spacing: normal;
@@ -328,7 +461,7 @@ background-color: #eaeaea;
 }
 
 .write-us input[type="text"]:focus {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 line-height: 1.25;
 letter-spacing: normal;
@@ -338,7 +471,7 @@ border:3px solid #f0c52e;
 }
 
 .write-us textarea {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 line-height: 1.25;
 letter-spacing: normal;
@@ -347,7 +480,7 @@ background-color: #f2f2f2;
 }
 
 .write-us textarea:hover {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 line-height: 1.25;
 letter-spacing: normal;
@@ -356,7 +489,7 @@ background-color: #eaeaea;
 }
 
 .write-us textarea:focus {
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 line-height: 1.25;
 letter-spacing: normal;
@@ -366,7 +499,7 @@ border:3px solid #f0c52e;
 }
 
 .button-write-us {
-font-family: Gilroy, Arial, sans-serif;
+font-family: "Gilroy", Arial, sans-serif;
 font-size: 18.5px;
 font-weight: 800;
 line-height: 1.27;
@@ -379,7 +512,7 @@ background-color: #f0c52e;
 /*Фильтр товаров*/
 
 .filters-form {
-font-family: Gilroy;
+font-family: "Gilroy";
 font-size: 18px;
 font-weight: 800;
 line-height: 1.33;
@@ -393,7 +526,7 @@ list-style: none;
 
 .filters-form label {
 list-style: none;
-font-family: OpenSans, Arial, sans-serif;
+font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 font-weight: 300;
 line-height: 2.86;
@@ -401,7 +534,7 @@ letter-spacing: 0.1px;
 }
 
 .button-filter {
-font-family: Gilroy;
+font-family: "Gilroy";
 font-size: 18.5px;
 font-weight: 800;
 line-height: normal;
