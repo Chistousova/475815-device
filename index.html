@@ -44,6 +44,7 @@
       </nav>
     </header>
     <main class="container-index">
+      <!--
       <section class="main-slideshow">
         <div class="slideshow">
           <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
@@ -93,14 +94,16 @@
             </tr>
           </table>
         </div>
-      </section>
+      </section> -->
       <section class="main-popular">
         <ul class="popular">
           <li>
-            <a href="#">
-              <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
-              <h3>Виртуальная реальность</h3>
-            </a>
+            <div class="wrapper-popular">
+              <a href="#">
+                <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+                <h3>Виртуальная реальность</h3>
+              </a>
+            </div>
           </li>
           <li>
             <a href="catalog.html">
@@ -187,31 +190,33 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-wrapper">
-        <a class="logo-footer disabled"><img src="img/logo-device-footer.svg" width="167" height="54" alt="device"></a>
-        <div class="user-navigation">
-          <ul class="user-navigation-list user-navigation-footer">
-            <li><a href="#">Войти</a></li>
-            <li><a href="#">Сравнить</a></li>
-            <li><a href="cart.html">Корзина</a></li>
+      <div class="wrapper-all-footer">
+        <div class="footer-wrapper">
+          <a class="logo-footer disabled"><img src="img/logo-device-footer.svg" width="167" height="54" alt="device"></a>
+          <div class="user-navigation">
+            <ul class="user-navigation-list user-navigation-footer">
+              <li><a href="#">Войти</a></li>
+              <li><a href="#">Сравнить</a></li>
+              <li><a href="cart.html">Корзина</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-navigation">
+          <span class="footer-contacts footer-contacts-address">г. Москва, ул. Строителей, 15</span>
+          <ul class="site-navigation site-navigation-footer">
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="guarantee.html">Гарантия</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+          <span class="footer-contacts footer-contacts-phone">Тел. +7(495) 495-95-95</span>
+        </div>
+        <div class="footer-social">
+          <ul class="social-button">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
           </ul>
         </div>
-      </div>
-      <div class="footer-navigation">
-        <span class="footer-contacts footer-contacts-address">г. Москва, ул. Строителей, 15</span>
-        <ul class="site-navigation site-navigation-footer">
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <span class="footer-contacts footer-contacts-phone">Тел. +7(495) 495-95-95</span>
-      </div>
-      <div class="footer-social">
-        <ul class="social-button">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-        </ul>
       </div>
     </footer>
     <div class="form-write-us">
