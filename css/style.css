@@ -669,12 +669,10 @@ padding-right: 0;
 .main-footer{
 background-color:#464646; 
 width: 100%;
-
-margin: 0 auto;
 }
 
 .wrapper-all-footer{
-padding: 65px 140px 70px 140px;
+padding: 65px 20px 70px 20px;
 width: 1160px;
 margin: 0 auto;
 }
@@ -919,4 +917,14 @@ background-color: #f0c52e;
 
 .wrapper-popular > img {
 
+}
+
+/*pop-up*/
+
+.form-write-us {
+display: none;
+}
+
+.map-popup {
+display: none;
 }
