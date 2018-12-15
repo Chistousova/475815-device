@@ -46,10 +46,10 @@ text-decoration: none;
 color: #000000;
 }
 
-img {
+/*img {
   max-width: 100%;
   height: auto;
-}
+}*/
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -196,6 +196,10 @@ margin: 0;
 padding-left: 8px;
 }
 
+.exit {
+opacity: 0.3;
+}
+
 .user-navigation-list li{
 display: inline;
 }
@@ -308,6 +312,7 @@ display: inline;
 }
 
 
+
 /*  logo */
 
 
@@ -329,13 +334,80 @@ opacity: 1;
 }
 
 /*services-list*/
+.main-services {
+display: flex;
+width: 1160px;
+margin-top: 90px;
+min-height: 390px;
+background-image: linear-gradient(to bottom, #ffffff 25%, #e5e5e5 25%);
+position: relative;
+z-index: 0;
+}
+
+
+.main-services::before {
+content: "";
+position: absolute;
+width: 7px;
+min-height: 319px ;
+background-color: #000000;
+left: 285px;
+}
+
+
+.services-list {
+width: 285px;
+margin: 0;
+padding:0;
+}
+
+
 .services-list li {
 list-style: none;
+margin-top: 90px;
+font-family: "Gilroy", Arial, sans-serif;
+font-size: 18px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.33;
+letter-spacing: 3.6px;
+text-transform: uppercase;
 }
+
 
 .services-list-description {
 list-style: none;
+padding: 0;
+
 }
+
+
+.services-list-description li {
+display: flex;
+	
+}
+.services-text-wrapper{
+width:680px;
+padding-left: 100px;
+padding-right: 130px;
+box-sizing: border-box;	
+}
+
+
+.services-text-wrapper h2 {
+font-family: "Gilroy", Arial, sans-serif;
+font-size: 47px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.02;
+letter-spacing: 0.5px;
+padding-top: 15px;
+	
+}
+
+
 
 /*about us, contacts */
 
@@ -388,9 +460,9 @@ top: -50px;
 width: 560px;
 margin: 0;
 display:flex;
-justify-content: space-between;
 flex-direction: column;
 position: relative;
+justify-content: space-between;
 }
 
 .main-contacts h2 {
@@ -404,17 +476,30 @@ margin-bottom: 60px;
 }
 
 .main-text {
+font-family: "OpenSans", Arial, sans-serif;
 font-size: 15px;
 font-weight: 300;
 line-height: 30px;
 letter-spacing: normal;
 margin: 0;
 margin-bottom: 44px;
+
 }
 
 .about-us ul{
 padding: 0;
 }
+
+.about-us > .internal-link {
+margin-top: 85px;
+margin-bottom: 98px;	
+}
+
+.main-contacts > .internal-link {
+margin-top: 85px;
+margin-bottom: 98px;	
+}
+
 
 .transport-companies {
 margin: 0;
@@ -444,41 +529,44 @@ list-style: none;
 
 .internal-link {
 font-family: "Gilroy", Arial, sans-serif;
-font-size: 18.5px;
+font-size: 18px;
 font-weight: 800;
-line-height: 1.27;
-letter-spacing: 3.7px;
-display: block;
-width: 260px;
-margin-top: 85px;
-margin-bottom: 98px;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.33;
+letter-spacing: 3.6px;
+
 position: relative;
 text-transform: uppercase;
-padding-left: 25px;
-display: block;
+
+
+
 }
 
 .internal-link::before{
 content: "";
-width: 260px;
-height: 8px;
+min-height: 8px;
 background-color: #f0c52e;
 position: absolute;
 top:7px;
-right:25px;
 z-index: -1;
+
+
 }
 
 .internal-link:hover::before{
 content: "";
-width: 260px;
-height: 40px;
+
+min-height: 40px;
 background-color: #f0c52e;
 position: absolute;
 top: -10px;
-right: 25px;
+
 z-index: -1;
 }
+
+
+
 
 .internal-link:active{
 color: rgba(0, 0, 0, 0.3);
@@ -548,6 +636,12 @@ padding-right: 20px;
 background-repeat: no-repeat;
 vertical-align: middle;
 }
+
+.filter-option input[type="checkbox"]:checked +:hover {
+opacity: 0.6;
+
+} 
+
 
 
 .filters-radio input[type="radio"] {
@@ -652,14 +746,24 @@ letter-spacing: 3.5px;
 text-transform: uppercase;
 }
 
-.sorting-list {
+.sorting-list a {
 font-family: "Open Sans", Arial, sans-serif;
 font-size: 14px;
 font-stretch: normal;
 line-height: 1.25;
 text-transform: none;
 list-style: none;
+color: rgba(0, 0, 0, 0.3);
 }
+
+.sorting-list a:hover {
+color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-list a:active {
+color: #000000;
+}
+
 
 /*sorting*/
 .sorting {
@@ -696,6 +800,15 @@ padding: 0;
 display: inline-block;
 list-style: none;
 width: 11px;
+opacity: 0.2;
+}
+
+.arrow li:hover {
+opacity: 0.4;
+}
+
+.arrow li:active {
+opacity: 1;
 }
 
 .icon-up-dir {
@@ -766,16 +879,48 @@ padding-right: 30px;
 }
 
 .pagination-back {
-padding-left: 30px;
-padding-top: 30px;
-padding-bottom: 30px;
+padding: 30px;
 }
 
 .pagination-next {
-padding-right: 30px;
-padding-top: 30px;
-padding-bottom: 30px;
+padding: 30px;
 }
+
+.pagination-back:hover {
+background-color: #dadada;
+}
+
+.pagination-next:hover {
+background-color: #dadada;
+}
+
+.pagination-back:active {
+color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-next:active {
+color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.pagination-list a {
+opacity: 0.3;
+}
+
+.pagination-list a:hover {
+opacity: 0.6;
+}
+
+.pagination-list a:active {
+opacity: 1;
+}
+
+.pagination-item-current a {
+opacity: 1;
+}
+
+
 
 /*catalog */
 .catalog {
@@ -798,6 +943,10 @@ padding: 0;
 list-style: none;
 width: 360px;
 display: block;
+}
+
+.catalog-item-image:hover {
+opacity: 0.7;
 }
 
 .catalog-list li:nth-child(odd) {
@@ -872,6 +1021,14 @@ line-height: 1.71;
 letter-spacing: 0.1px;
 padding:0;
 color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover {
+color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+color: rgba(0, 0, 0, 0.1);
 }
 
 .breadcrumbs ul {
@@ -1131,6 +1288,8 @@ color: inherit;
 
 }
 
+
+
 .user-name {
 width: 360px;
 margin: 0;
@@ -1283,14 +1442,26 @@ height: 160px;
 background-color: rgba(240, 197, 46, 0.5);
 }
 
+.wrapper-popular li:nth-child(2) {
+text-align:bottom;
+}
+
 .wrapper-popular:hover {
 background-color: #f0c52e;
 }
 
-
 .wrapper-popular img:active {
 opacity: 0.3;
 }
+
+
+.popular :active {
+
+color: rgba(0, 0, 0, 0.3);
+
+}
+
+
 
 .popular h3 {
 padding-top: 39px;
@@ -1317,3 +1488,156 @@ font: inherit;
 color: inherit;
 background-color: transparent;
 }
+
+/*slideshow*/
+
+.slideshow {
+width: 1160px;
+display: flex;
+justify-content: space-between;
+background-image: linear-gradient(rgba(240, 197, 46, 0.5) 110px, #ffffff 110px);
+position: relative;
+
+}
+
+.slideshow::before {
+content: "";
+background-color: #ffffff;
+width: 100px;
+height: 7px;
+position: absolute;
+right: 460px;
+}
+
+.slider-1{
+	position: relative;
+}
+
+
+.slider-1::after {
+content: "01";
+font-family: "Gilroy", Arial, sans-serif;
+font-size: 179px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 1;
+letter-spacing: 1.8px;
+position: absolute;
+color: #ffffff;
+right: 45px;
+top: -20px;
+
+}
+
+.slider-2::after {
+content: "02";
+font-family: "Gilroy", Arial, sans-serif;
+font-size: 179px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 1;
+letter-spacing: 1.8px;
+position: absolute;
+color: #ffffff;
+right: 45px;
+top: -20px;
+
+}
+
+.slider-3::after {
+content: "03";
+font-family: "Gilroy", Arial, sans-serif;
+font-size: 179px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 1;
+letter-spacing: 1.8px;
+position: absolute;
+color: #ffffff;
+right: 45px;
+top: -20px;
+
+}
+
+.slideshow-img {
+padding-left: 90px;
+padding-right: 125px;
+min-height: 384px;
+}
+
+.slideshow-description {
+width: 760px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+
+.slideshow-description::before {
+content: "";
+background-image: url("../img/slider-button-empty.svg");
+position: absolute;
+display: inline-block;
+width: 12px;
+height: 12px;
+background-repeat: no-repeat;
+background-size: contain;
+top: 312px;
+left: 300px;
+}
+
+
+.slideshow-description h2 {
+font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: 0.5px;
+  width: 400px;
+  padding-top: 35px;
+}
+
+.slideshow-description > .main-text {
+font-family: "OpenSans", Arial, sans-serif;
+font-size: 15px;
+font-weight: 300;
+font-style: normal;
+font-stretch: normal;
+line-height: 2;
+letter-spacing: 0.2px;
+width: 500px;
+margin-bottom: 60px;
+}
+
+.slideshow-table {
+width: 100%;
+margin-top: 76px;
+}
+
+.product-property {
+font-family: "Gilroy", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 0.4px;
+}
+
+.description-product-property {
+font-family: "OpenSans", Arial, sans-serif;
+font-size: 13px;
+font-weight: 300;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.54;
+letter-spacing: 0.1px;
+
+}
+
+
