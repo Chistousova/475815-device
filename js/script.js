@@ -10,11 +10,6 @@ var name = popup.querySelector("[name=username]");
 var mail = popup.querySelector("[name=e-mail]");
 var letter = popup.querySelector("[name=user-letter]");
 
-
-var slide = document.querySelector(".slideshow-button");
-var button = slide.querySelectorAll("[name=slideshow]")
-
-
 link.addEventListener("click", function (evt) {
 evt.preventDefault();
 popup.classList.add("open-form");
@@ -44,4 +39,3 @@ closemap.addEventListener("click", function (evt) {
 evt.preventDefault();
 open.classList.remove("open-map");
 });
-

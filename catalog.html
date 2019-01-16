@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -84,20 +84,22 @@
         <section class="filters">
           <span class="filters-text">Фильтр</span> 
           <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
-            <legend class="filter-price">Стоимость</legend>
-            <div class="range-wrapper">
-              <div class="scale">
-                <div class="bar"></div>
+            <fieldset>
+              <legend class="filter-price">Стоимость</legend>
+              <div class="range-wrapper">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range">
+                  <button type="button" class="range-toggle range-toggle-min"></button>
+                  <button type="button" class="range-toggle range-toggle-max"></button>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+                </div>
               </div>
-              <div class="range">
-                <button type="button" class="range-toggle range-toggle-min"></button>
-                <button type="button" class="range-toggle range-toggle-max"></button>
-              </div>
-              <div class="price-controls">
-                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-                <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
-              </div>
-            </div>
+            </fieldset>
             <fieldset>
               <legend>Цвет</legend>
               <ul>
