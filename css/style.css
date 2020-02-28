@@ -488,6 +488,7 @@ top: 39px;
 
 .slider-1 {
 position: relative;
+display: flex;
 }
 
 .slider-2 {
